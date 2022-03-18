@@ -1,0 +1,1 @@
+- put ./fonts to ~/.fonts then run `fc-cache -f -v` (ubuntu)

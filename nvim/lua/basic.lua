@@ -49,8 +49,9 @@ vim.o.hidden = true
 -- 鼠标支持
 vim.o.mouse = "a" 
 -- I don't know how to copy with mouse when mouse = 'a'
--- mouse select + copy : Ctrl + Shift + Left Click Drag to select, press right button to copy 
+-- [not suggested] mouse select + copy : Ctrl + Shift + Left Click Drag to select, press right button to copy 
 -- paste : Ctrl + Shift + v
+-- [suggested] use mouse to select (visual mode), and press 'y' to copy to clipboard
 -- in init.vim : set clipboard+=unnamedplus
 -- to copy in vim to clipboard 
 -- 禁止创建备份文件

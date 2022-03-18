@@ -30,12 +30,29 @@ local my_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+my_on_attach = function(client, bufnr)
+    -- 禁用格式化功能，交给专门插件插件处理
+    -- client.resolved_capabilities.document_formatting = false
+    -- client.resolved_capabilities.document_range_formatting = false
+
+    local function buf_set_keymap(...)
+      vim.api.nvim_buf_set_keymap(bufnr, ...)
+    end
+    -- local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    -- 绑定快捷键
+    require("keybindings").maplsp_general(buf_set_keymap)
+    -- 保存时自动格式化
+    --vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+end
+
 local opts = {
     on_attach = my_on_attach,
     flags = {
         debounce_text_changes = 150,
     }
 }
+-- disable all
+--opts = {}
 -- 查看目录等信息
 -- print(vim.inspect(server))
 return {

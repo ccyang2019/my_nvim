@@ -155,7 +155,7 @@ pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+--map("n", "<C-w>", ":Bdelete!<CR>", opt)
 -- 关闭左/右侧标签页
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
@@ -163,8 +163,8 @@ map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+-- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
   i = {
@@ -440,4 +440,58 @@ pluginKeys.gitsigns = {
   ["x ih"] = ":<C-U>Gitsigns select_hunk<CR>"
 }
 
+-- lsp_general keymapping
+-- http://xfyuan.github.io/2021/03/neovim-builtin-lsp-keymappings/
+pluginKeys.maplsp_general = function(mapbuf)
+
+  mapbuf("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+  mapbuf("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
+
+  mapbuf("n", "<leader>ll", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+  mapbuf("n", "<leader>lg", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+  mapbuf("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+  mapbuf("n", "<leader>l;", "<cmd>lua vim.lsp.diagnostic.goto_prev()", opt)
+  mapbuf("n", "<leader>l,", "<cmd>lua vim.lsp.diagnostic.goto_next()", opt)
+
+  mapbuf("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+  -- rename
+  --[[
+  Lspsaga 替换 rn
+  --]]
+  -- mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
+  -- code action
+  --[[
+  Lspsaga 替换 ca
+  --]]
+  -- mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
+  -- go xx
+  --[[
+  Lspsaga 替换 gd
+  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+  --]]
+  -- mapbuf("n", "gd", "<cmd>Lspsaga preview_definition<CR>", opt)
+  --[[
+  Lspsaga 替换 gh
+  --]]
+  -- mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
+  --[[
+  Lspsaga 替换 gr
+  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+  --]]
+  --mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
+  -- mapbuf("n", "gr", "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>", opt)
+  --[[
+  Lspsaga 替换 gp, gj, gk
+  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+  mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+  mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+  --]]
+  -- diagnostic
+  -- mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>",opt)
+  -- mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
+  -- mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
+  -- 未用
+
+
+end
 return pluginKeys
