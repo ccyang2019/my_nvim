@@ -19,6 +19,18 @@ require('packer').startup(function()
     -- telescope extensions
     use "LinArcX/telescope-env.nvim"
 
+ -- bufferline
+    use({
+      "akinsho/bufferline.nvim",
+      requires = {"kyazdani42/nvim-web-devicons", "moll/vim-bbye"}
+    })
+
+  -- toggleterm
+    use("akinsho/toggleterm.nvim")
+
+  -- project
+    use("ahmedkhalf/project.nvim")
+
 
   --- LSP
   use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
