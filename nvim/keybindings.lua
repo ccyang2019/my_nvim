@@ -1,3 +1,6 @@
+-- delete autocomment with backspace
+-- inoremap <silent><expr> <bs> getline('.') =~# '^//\s*$' ? "<c-u>" : "<bs>"
+
 -- leader key 为空
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -102,7 +105,8 @@ map("n", "s=", "<C-w>=", opt)
 local pluginKeys = {}
 
 -- nvim-tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+--map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<C-t>", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 {

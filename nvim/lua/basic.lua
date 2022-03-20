@@ -32,7 +32,7 @@ vim.o.smartindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 -- 搜索不要高亮
-vim.o.hlsearch = false
+vim.o.hlsearch = true -- 光标高亮
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 命令行高为2，提供足够的显示空间
@@ -47,7 +47,7 @@ vim.o.whichwrap = "<,>,[,]"
 -- 允许隐藏被修改过的buffer
 vim.o.hidden = true
 -- 鼠标支持
-vim.o.mouse = "a" 
+vim.o.mouse = "nv" 
 -- I don't know how to copy with mouse when mouse = 'a'
 -- [not suggested] mouse select + copy : Ctrl + Shift + Left Click Drag to select, press right button to copy 
 -- paste : Ctrl + Shift + v
@@ -71,7 +71,7 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
 vim.o.background = "dark"
 vim.o.termguicolors = true
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false  -- 关闭终端颜色
 -- 不可见字符的显示，这里只把空格显示为一个点
 -- vim.o.list = true
 -- vim.o.listchars = "space:·"

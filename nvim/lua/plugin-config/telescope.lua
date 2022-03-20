@@ -3,6 +3,11 @@ if not status then
   vim.notify("没有找到 telescope")
   return
 end
+local trouble_ok, trouble = pcall(require, "trouble")
+if not trouble_ok then
+  vim.notify("没有找到 trobule")
+end
+
 
 -- local actions = require("telescope.actions")
 telescope.setup({
@@ -23,4 +28,5 @@ telescope.setup({
 })
 
 pcall(telescope.load_extension, "env")
+trouble.setup()
 

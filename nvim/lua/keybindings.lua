@@ -78,7 +78,7 @@ map("n", "sh", ":sp<CR>", opt)
 map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
 map("n", "so", "<C-w>o", opt) -- close others
--- alt + hjkl  窗口之间跳转 (TBD: not work at office. can't find ALT key)
+-- alt + hjkl  窗口之间跳转 (TODO: not work at office. can't find ALT key)
 map("n", "<A-h>", "<C-w>h", opt)
 map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)

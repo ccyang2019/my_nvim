@@ -7,7 +7,7 @@ end
 treesitter.setup({
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
-  ensure_installed = { "json", "python",  "vim", "lua", 'javascript' },
+  ensure_installed = { "markdown", "json", "python",  "vim", "lua", 'javascript' },
   -- ensure_installed = "maintained",
 
   -- 启用代码高亮模块
@@ -25,7 +25,7 @@ treesitter.setup({
       scope_incremental = "<TAB>",
     },
   },
-  -- 启用代码缩进模块 (=) 
+  -- 启用代码缩进模块 (=)
   indent = {
     enable = true,
   },

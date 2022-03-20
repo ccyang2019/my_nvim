@@ -7,8 +7,9 @@ local lsp_installer = require "nvim-lsp-installer"
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 -- { key: 语言 value: 配置文件 }
 local servers = {
-  pyright = require "lsp.config.pyright", -- /lua/lsp/config/pyright.lua
-  bashls = require "lsp.config.bashls", -- /lua/lsp/config/bashls.lua
+  pyright = require "lsp_config/pyright", -- /lua/lsp/config/pyright.lua
+  bashls = require "lsp_config/bashls", -- /lua/lsp/config/bashls.lua
+  sumneko_lua = require "lsp_config/lua", -- /lua/lsp/config/lua.lua
 }
 
 

@@ -3,6 +3,12 @@
 "source ~/.vimrc
 set clipboard+=unnamedplus
 set mouse+=a
+"NOTE:https://stackoverflow.com/questions/32103591/vim-cant-scroll-in-iterm2
+"set ttymouse=xterm2
+"  if has("mouse_sgr")
+"    set ttymouse=sgr
+" endif
+
 "set tabstop=4
 "set shiftwidth=4
 "set softtabstop=4
@@ -10,21 +16,12 @@ set mouse+=a
 "au BufWinEnter * set shiftwidth=4
 "au BufWinEnter * set softtabstop=4
 
-call plug#begin()                                                                                                                                                    
-     " All this are to get a Jupyter like experience                                 
-     Plug 'kana/vim-textobj-user'                                                    
-     Plug 'kana/vim-textobj-line'                                                    
-     "Plug 'goerz/jupytext.vim'                                                      
-     Plug 'GCBallesteros/iron.nvim'                                                  
-     Plug 'GCBallesteros/jupytext.vim'                                               
-     Plug 'GCBallesteros/vim-textobj-hydrogen'                                       
-     "Plug 'j-hui/fidget.nvim'
-     "
-call plug#end()                                                                                                                                                    
 lua require('init')
 
-" Jupytext                                                                     
+
 "let g:jupytext_fmt = 'py:hydrogen'                                             
 let g:jupytext_fmt = 'py'         
 
-
+nnoremap <C-t> :NvimTreeToggle<CR>
+" disable auto comment
+au FileType * set fo-=c fo-=r fo-=o
