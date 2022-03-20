@@ -7,7 +7,7 @@ require("toggleterm").setup({
       return vim.o.columns * 0.4
     end
   end,
-  open_mapping = [[<leader>t]],
+  open_mapping = [[<C-\>]],
   insert_mappings = true, -- whether or not the open mapping applies in insert mode
   hide_numbers = true, -- hide the number column in toggleterm buffers
   shade_filetypes = {},

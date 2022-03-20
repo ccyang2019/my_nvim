@@ -260,6 +260,8 @@ map("n", "s=", "<C-w>=", opt)
 
 map("n", "<TAB>",   ":BufferLineCycleNext <CR>", opt)
 map("n", "<S-TAB>", ":BufferLineCyclePrev <CR>", opt)
+-- hot key to open config file
+map("n", "ec", ":e ${HOME}/.config/nvim/lua/init.lua <CR>", opt)
 
 local wk = require("which-key")
 wk.setup(which_key.setup)
