@@ -40,6 +40,8 @@ require('packer').startup(function()
     -- markdown TOC, Vista
     use 'liuchengxu/vista.vim'
     use 'mzlogin/vim-markdown-toc'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
 
     use({
         "ethanholz/nvim-lastplace",
@@ -150,12 +152,12 @@ require('packer').startup(function()
 end)
 
 -- 每次保存 plugins.lua 自动安装插件
-pcall(vim.cmd, [[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]])
+-- pcall(vim.cmd, [[
+-- augroup packer_user_config
+-- autocmd!
+-- autocmd BufWritePost plugins.lua source <afile> | PackerSync
+-- augroup end
+-- ]])
 
 -- :PackerSync after this plugin setting is changed
 -- xcd

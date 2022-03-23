@@ -16,7 +16,7 @@ require("plugin-config/indent-blankline")
 --require("plugin-config.dashboard")
 require("plugin-config/project")
 require("plugin-config/toggleterm")
---require("plugin-config/nvim-treesitter")
+require("plugin-config/nvim-treesitter")
 require("plugin-config/null-ls")
 require('lspfuzzy').setup{}
 

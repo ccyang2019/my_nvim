@@ -263,6 +263,13 @@ map("n", "<S-TAB>", ":BufferLineCyclePrev <CR>", opt)
 -- hot key to open config file
 map("n", "ec", ":e ${HOME}/.config/nvim/lua/init.lua <CR>", opt)
 
+-- Custom vim-surrond setting
+vim.g["surround_"..vim.fn.char2nr("r")] = "<font color=#FF0000>\r</font>" -- Red
+vim.g["surround_"..vim.fn.char2nr("b")] = "<font color=#0000FF>\r</font>" -- Blue
+vim.g["surround_"..vim.fn.char2nr("p")] = "<font color=#FF00FF>\r</font>" -- Pink
+vim.g["surround_"..vim.fn.char2nr("g")] = "<font color=#00FF00>\r</font>" -- Green
+vim.g["surround_"..vim.fn.char2nr("c")] = "<font color=#00FFFF>\r</font>" -- Cyan
+
 local wk = require("which-key")
 wk.setup(which_key.setup)
 
