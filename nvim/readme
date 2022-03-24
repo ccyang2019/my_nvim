@@ -16,6 +16,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 https://www.linode.com/docs/guides/ripgrep-linux-installation/
 for ToDo
 
+# python
+pip install black
+
 # LSP bash
 sudo apt-get install shellcheck
 sudo apt-get install ripgrep

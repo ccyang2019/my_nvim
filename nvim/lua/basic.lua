@@ -47,7 +47,7 @@ vim.o.whichwrap = "<,>,[,]"
 -- 允许隐藏被修改过的buffer
 vim.o.hidden = true
 -- 鼠标支持
-vim.o.mouse = "nv" 
+-- vim.o.mouse = "nv" 
 -- I don't know how to copy with mouse when mouse = 'a'
 -- [not suggested] mouse select + copy : Ctrl + Shift + Left Click Drag to select, press right button to copy 
 -- paste : Ctrl + Shift + v
