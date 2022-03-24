@@ -14,7 +14,7 @@ is_nvim_install() {
 install_nvim_amd64() {
     wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
     # check user is root
-    if [ "$(id -u)" != "0" ]; then
+    if [ "$(id -u)" == "0" ]; then
         apt install ./nvim-linux64.deb
     else
         sudo apt install ./nvim-linux64.deb
