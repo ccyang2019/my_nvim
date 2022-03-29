@@ -131,6 +131,7 @@ require('packer').startup(function()
            "kyazdani42/nvim-tree.lua",
           requires="kyazdani42/nvim-web-devicons"
     })
+    use('WhoIsSethDaniel/toggle-lsp-diagnostics.nvim') -- toggle lsp diagnostics
     -- https://github.com/ojroques/nvim-lspfuzzy
     use {
         'ojroques/nvim-lspfuzzy',
