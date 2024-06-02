@@ -27,6 +27,8 @@ require('packer').startup(function()
 
     -- #Edit/Coding
     use("github/copilot.vim")
+    -- copy text to the system clipboard from anywhere using the ANSI OSC52 sequence.
+    use("ojroques/vim-oscyank")
     -- This plugin adds indentation guides to all lines (including empty lines).
     --  https://github.com/lukas-reineke/indent-blankline.nvim
     use "lukas-reineke/indent-blankline.nvim"
@@ -125,7 +127,11 @@ require('packer').startup(function()
 
     -- #LSP
     use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client
-    use 'williamboman/nvim-lsp-installer'
+    -- use 'williamboman/nvim-lsp-installer' => 20230301 obsolete
+    --  lsp
+    use({ "williamboman/mason.nvim" })
+    use({ "williamboman/mason-lspconfig.nvim" })
+
     use("arkav/lualine-lsp-progress")
     use({
            "kyazdani42/nvim-tree.lua",

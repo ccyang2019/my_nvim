@@ -16,8 +16,8 @@ require("plugin-config/telescope")
 require("plugin-config/project")
 require("plugin-config/toggleterm")
 -- require("plugin-config/nvim-treesitter")
--- require("plugin-config/null-ls") => error
-require('lspfuzzy').setup {} 
+require("plugin-config/null-ls")
+-- require('lspfuzzy').setup {} => error
 
 require("plugin-config/bufferline")
 -- important to import after colorscheme
@@ -26,9 +26,9 @@ require("plugin-config/lualine")
 -- use lsp formater
 -- require("plugin-config.formatter")
 ---- 内置LSP
-require("lsp/setup")
-----require("lsp/cmp") : obsolete
--- require("lsp/ui") : obsolete
+--require("lsp/setup")
+----require("lsp/cmp")
+-- require("lsp/ui")
 --
 --
 -- IDE

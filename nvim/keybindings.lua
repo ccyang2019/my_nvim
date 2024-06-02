@@ -25,7 +25,7 @@ local opt = {
 map("c", "<C-j>", "<C-n>", {
   noremap = false
 })
-map("c", "<C-k>", "<C-p>", {
+
   noremap = false
 })
 
@@ -60,6 +60,10 @@ map("v", "p", '"_dP', opt)
 map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
+
+-- Mapping or command for quick directory change
+-- nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 -- insert 模式下，跳到行首行尾
 -- map("i", "<C-h>", "<ESC>I", opt)
 -- map("i", "<C-l>", "<ESC>A", opt)
@@ -444,4 +448,5 @@ pluginKeys.gitsigns = {
   ["x ih"] = ":<C-U>Gitsigns select_hunk<CR>"
 }
 
+-- 
 return pluginKeys
